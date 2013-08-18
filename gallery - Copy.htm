@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gallery</title>
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+
+	<link rel="stylesheet"  href="css/themes/default/jquery.mobile-1.3.2.min.css">
+	<link rel="stylesheet" href="_assets/css/jqm-demos.css">
+	
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.mobile-1.3.2.min.js"></script>
+		
+</head>
+<script>
+var cur_id = 0;
+function showImage(id) {
+	cur_id = id;
+	$("#gallery").hide();
+	$('#con_gallery').append("<div id='disp_img' style='background-image: url(./photos/"+id+".jpg);'></div>");
+	$('#navbar_gallery').hide();
+	$('#navbar_image').show();
+}
+function closeImage() {
+	$("#gallery").show();
+	$('#disp_img').remove();
+	$('#navbar_gallery').show();
+	$('#navbar_image').hide();
+}
+function nextImage() {
+	id = (cur_id%9)+1;
+	cur_id = id;
+	$('#disp_img').remove();
+	$('#con_gallery').append("<div id='disp_img' style='background-image: url(./photos/"+id+".jpg);'></div>");	
+}
+function prevImage() {
+	id = cur_id-1;
+	if(id==0) id=9;
+	cur_id = id;
+	$('#disp_img').remove();
+	$('#con_gallery').append("<div id='disp_img' style='background-image: url(./photos/"+id+".jpg);'></div>");	
+}
+</script>
+<body>
+<div data-role="page" id="gallerypage">
+	<div data-role="header">
+		<h1>Gallery</h1>
+	</div>
+	<div data-role="content" id='con_gallery'>	
+		<div id="gallery">
+			<div class='gallery_img' style="background-image: url(./photos/1.jpg);" onClick="showImage(1)"></div>
+			<div class='gallery_img' style="background-image: url(./photos/2.jpg);" onClick="showImage(2)"></div>
+			<div class='gallery_img' style="background-image: url(./photos/3.jpg);" onClick="showImage(3)"></div>
+			<div class='gallery_img' style="background-image: url(./photos/4.jpg);" onClick="showImage(4)"></div>
+			<div class='gallery_img' style="background-image: url(./photos/5.jpg);" onClick="showImage(5)"></div>
+			<div class='gallery_img' style="background-image: url(./photos/6.jpg);" onClick="showImage(6)"></div>
+			<div class='gallery_img' style="background-image: url(./photos/7.jpg);" onClick="showImage(7)"></div>
+			<div class='gallery_img' style="background-image: url(./photos/8.jpg);" onClick="showImage(8)"></div>
+			<div class='gallery_img' style="background-image: url(./photos/9.jpg);" onClick="showImage(9)"></div>
+			<div class='gallery_img' style="background-image: url(./photos/10.jpg);" onClick="showImage(10)"></div>
+			<div class='gallery_img' style="background-image: url(./photos/11.jpg);" onClick="showImage(11)"></div>
+			<div class='gallery_img' style="background-image: url(./photos/12.jpg);" onClick="showImage(12)"></div>
+			<div class='gallery_img' style="background-image: url(./photos/13.jpg);" onClick="showImage(13)"></div>
+			<div class='gallery_img' style="background-image: url(./photos/14.jpg);" onClick="showImage(14)"></div>
+			<div class='gallery_img' style="background-image: url(./photos/15.jpg);" onClick="showImage(15)"></div>
+			<div class='gallery_img' style="background-image: url(./photos/16.jpg);" onClick="showImage(16)"></div>
+			<div class='gallery_img' style="background-image: url(./photos/17.jpg);" onClick="showImage(17)"></div>
+			<div class='gallery_img' style="background-image: url(./photos/18.jpg);" onClick="showImage(18)"></div>
+			<div class='gallery_img' style="background-image: url(./photos/19.jpg);" onClick="showImage(19)"></div>
+			<div class='gallery_img' style="background-image: url(./photos/20.jpg);" onClick="showImage(20)"></div>
+			<div class='gallery_img' style="background-image: url(./photos/21.jpg);" onClick="showImage(21)"></div>
+			<div class='gallery_img' style="background-image: url(./photos/22.jpg);" onClick="showImage(22)"></div>
+			<div class='gallery_img' style="background-image: url(./photos/23.jpg);" onClick="showImage(23)"></div>
+			<div class='gallery_img' style="background-image: url(./photos/24.jpg);" onClick="showImage(24)"></div>
+			<div class='gallery_img' style="background-image: url(./photos/25.jpg);" onClick="showImage(25)"></div>
+			<div class='gallery_img' style="background-image: url(./photos/26.jpg);" onClick="showImage(26)"></div>
+			<div class='gallery_img' style="background-image: url(./photos/27.jpg);" onClick="showImage(27)"></div>
+			<div class='gallery_img' style="background-image: url(./photos/28.jpg);" onClick="showImage(28)"></div>
+			<div class='gallery_img' style="background-image: url(./photos/29.jpg);" onClick="showImage(29)"></div>
+			<div class='gallery_img' style="background-image: url(./photos/30.jpg);" onClick="showImage(30)"></div>
+			<div class='gallery_img' style="background-image: url(./photos/31.jpg);" onClick="showImage(31)"></div>
+			<div class='gallery_img' style="background-image: url(./photos/32.jpg);" onClick="showImage(32)"></div>
+			<div class='gallery_img' style="background-image: url(./photos/33.jpg);" onClick="showImage(33)"></div>
+			<div class='gallery_img' style="background-image: url(./photos/34.jpg);" onClick="showImage(34)"></div>
+			<div class='gallery_img' style="background-image: url(./photos/35.jpg);" onClick="showImage(35)"></div>
+			<div class='gallery_img' style="background-image: url(./photos/36.jpg);" onClick="showImage(36)"></div>
+			<div class='gallery_img' style="background-image: url(./photos/37.jpg);" onClick="showImage(37)"></div>
+			<div class='gallery_img' style="background-image: url(./photos/38.jpg);" onClick="showImage(38)"></div>
+			<div class='gallery_img' style="background-image: url(./photos/39.jpg);" onClick="showImage(39)"></div>
+			<script>
+				$('.gallery_img').css("width",((window.innerWidth/3)-42)+"px");
+				$('.gallery_img').css("height",((((window.innerWidth/3)-50)*3)/2)+"px");
+			</script>
+			<style>
+			.gallery_img {
+				border: 3px #000 solid;
+				margin: 10px;
+				float: left;
+				background-position: 0px 0px;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+			#disp_img {
+				position: absolute;
+				top: 50px;
+				left: 50px;
+				right: 50px;
+				bottom: 50px;
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-size: cover cover;
+			}
+			</style>
+		</div>
+	</div>
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar" id='navbar_gallery'>
+			<ul>
+				<li><a href="#" data-icon="home" data-transition="slideup" data-rel="back">Home</a></li>
+				<li><a href="#credits" data-icon="gear" data-transition="slideup">Credit</a></li>
+			</ul>
+		</div><!-- /navbar -->
+		<div data-role="navbar" id='navbar_image'>
+			<ul>
+				<li><a href="#" data-icon="back" onClick='closeImage();'>Back</a></li>
+				<li><a href="#" data-icon="arrow-l" onClick='prevImage();'>Previous</a></li>
+				<li><a href="#" data-icon="check">Play</a></li>
+				<li><a href="#" data-icon="arrow-r" onClick='nextImage();'>Next</a></li>
+			</ul>
+		</div><!-- /navbar -->
+		<script>$('#navbar_image').hide();</script>
+	</div>
+</div>
+</body>
+</html>
