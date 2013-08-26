@@ -7,15 +7,24 @@
 	<link rel="stylesheet"  href="css/themes/default/jquery.mobile-1.3.2.min.css">
 	<link rel="stylesheet" href="_assets/css/jqm-demos.css">
 	<link rel="stylesheet"  href="css/style.css">
-	<link rel="shortcut icon" href="favicon.ico">
 	<script src="js/jquery.js"></script>
 	<script src="_assets/js/index.js"></script>
 	<script src="js/jquery.mobile-1.3.2.min.js"></script>
 </head>
+<script type="text/javascript">
+function exitApp() {
+	window.close();
+}
+function shareApp() {
+	window.open('http://assamguide.computeraptor.com/share/');
+}
+</script>
 <body>
 <div data-role="page" id='home'>
 	<div data-role="header" data-position="fixed">
+		<a href="#" data-icon="forward" onClick="shareApp();">Share</a>
 		<h1>Assam Guide</h1>
+		<a href="#" data-icon="delete" onClick="exitApp();">Exit</a>
 	</div><!-- /header -->
 	<div data-role="content">	
 			<ul data-role="listview" data-inset="false">
